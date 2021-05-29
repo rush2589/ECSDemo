@@ -1,0 +1,37 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+HELP.md
+target/
+overlays/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Maven Flatten plugin ###
+.flattened-pom.xml
+
+# Log files
+*.log
+
+# Test output folder
+test-output/
+
+# Java class files
+*.class
+
+# Archive files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
