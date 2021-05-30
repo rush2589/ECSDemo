@@ -46,4 +46,10 @@ public class CarController {
         return new ResponseEntity(deleteFlag, HttpStatus.OK);
     }
 
+    @RequestMapping(path = "/car/details/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Car> getCarWithDetails(@PathVariable int id){
+        Car car = carService.getCarWithMatchingWords(id).get();
+        return new ResponseEntity(car, HttpStatus.OK);
+    }
+
 }
