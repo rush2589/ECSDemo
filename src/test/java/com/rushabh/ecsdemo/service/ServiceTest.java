@@ -1,6 +1,8 @@
 package com.rushabh.ecsdemo.service;
 
 import com.rushabh.ecsdemo.entity.Car;
+import com.rushabh.ecsdemo.entity.Make;
+import com.rushabh.ecsdemo.entity.Model;
 import com.rushabh.ecsdemo.repository.CarRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -33,9 +35,18 @@ public class ServiceTest {
         Car car = new Car();
         car.setId(id);
         car.setColour("Metalic Grey");
-        car.setMake("Hyundai");
-        car.setModel("I20");
+        //car.setMake("Hyundai");
+        //car.setModel("I20");
         car.setYear(2019);
+
+        Make make = new Make();
+        make.setName("Hyundai");
+
+        Model model = new Model();
+        model.setModel("I20");
+        model.setMake(make);
+
+        car.setModel(model);
 
         return car;
     }

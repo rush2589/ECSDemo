@@ -9,10 +9,12 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String make;
-    private String model;
     private String colour;
     private int year;
+
+    @ManyToOne(targetEntity = Model.class, cascade = CascadeType.ALL)
+    @JoinColumn(name="MODEL_ID", referencedColumnName = "id")
+    private Model model;
 
     @Transient
     private List<String> matchingWords;
@@ -25,19 +27,11 @@ public class Car {
         this.id = id;
     }
 
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getModel() {
+    public Model getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(Model model) {
         this.model = model;
     }
 

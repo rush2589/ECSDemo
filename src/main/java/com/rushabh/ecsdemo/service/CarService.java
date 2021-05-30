@@ -58,7 +58,7 @@ public class CarService {
         Optional<Car> optional = repository.findById(id);
         if (optional.isPresent()) {
             Car car = optional.get();
-            car.setMatchingWords(getMatchingWords(car.getMake()));
+            car.setMatchingWords(getMatchingWords(car.getModel().getMake().getName()));
             return Optional.of(car);
         }
         return Optional.empty();
