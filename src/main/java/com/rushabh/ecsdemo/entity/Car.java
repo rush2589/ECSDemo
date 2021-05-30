@@ -14,7 +14,7 @@ public class Car {
     private String make;
     private String model;
     private String colour;
-    private String year;
+    private int year;
 
     public int getId() {
         return id;
@@ -48,11 +48,12 @@ public class Car {
         this.colour = colour;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
+
 }
